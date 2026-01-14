@@ -40,18 +40,32 @@ npm install cookie-parser
 Thêm vào file `.env`:
 
 ```env
-# JWT Secrets (QUAN TRỌNG: Đổi trong production!)
-JWT_SECRET=your-super-secret-access-token-key-change-in-production
-JWT_REFRESH_SECRET=your-super-secret-refresh-token-key-different-from-access
+# --- DATABASE ---
+PORT=3000
+MONGO_URI=mongodb+srv://admin:tienganh123321@englishappdb.7wt55du.mongodb.net/english_app?appName=EnglishAppDB
 
-# Token Expiration
-JWT_EXPIRES_IN=15m          # Access token: 15 phút
-JWT_REFRESH_EXPIRES_IN=7d   # Refresh token: 7 ngày
+# --- BẢO MẬT TOKEN (SECRET KEYS) ---
+JWT_SECRET=keny_secret_2025
+JWT_REFRESH_SECRET=chuoi_bi_mat_2025_def_uvw_bao_mat_refresh
 
-# Cookie Settings
-COOKIE_MAX_AGE=2592000000   # 30 ngày (milliseconds)
-COOKIE_SECURE=false         # false cho development, true cho production
-NODE_ENV=development        # development hoặc production
+# Cloudinary Configuration (Đăng ký miễn phí tại https://cloudinary.com)
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+
+JWT_EXPIRES_IN=15m
+JWT_REFRESH_EXPIRES_IN=30d
+GEMINI_API_KEY=AIzaSyALGyI9W6O4KxnyxW9ezTlbehIgxY0usnc
+
+# --- CẤU HÌNH COOKIE & MÔI TRƯỜNG ---
+COOKIE_MAX_AGE=2592000000
+
+# Để false khi chạy localhost, sửa thành true khi deploy lên server thật
+COOKIE_SECURE=true
+NODE_ENV=production #development
+CLIENT_URL=https://beelingual-admin.onrender.com
+FRONTEND_URL=http://localhost:3000
+COOKIE_DOMAIN=
 ```
 
 ---
