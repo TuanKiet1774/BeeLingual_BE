@@ -42,11 +42,11 @@ Thêm vào file `.env`:
 ```env
 # --- DATABASE ---
 PORT=3000
-MONGO_URI=mongodb+srv://admin:tienganh123321@englishappdb.7wt55du.mongodb.net/english_app?appName=EnglishAppDB
+MONGO_URI=
 
 # --- BẢO MẬT TOKEN (SECRET KEYS) ---
-JWT_SECRET=keny_secret_2025
-JWT_REFRESH_SECRET=chuoi_bi_mat_2025_def_uvw_bao_mat_refresh
+JWT_SECRET=
+JWT_REFRESH_SECRET=
 
 # Cloudinary Configuration (Đăng ký miễn phí tại https://cloudinary.com)
 CLOUDINARY_CLOUD_NAME=your-cloud-name
